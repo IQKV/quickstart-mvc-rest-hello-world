@@ -1,0 +1,11 @@
+spring :
+  application :
+    name : sample-hello-world-rest
+  security :
+    users :
+      admin :
+        name : admin
+        password : admin
+      editor :
+        name : editor
+        password : editor
