@@ -5,7 +5,7 @@ type : docker
 steps:
 
   - name: test
-    image: maven:3-jdk-11
+    image: maven:3-jdk-11-slim
     environment :
       DEPLOYER_USERNAME :
         from_secret : DEPLOYER_USERNAME
@@ -29,7 +29,7 @@ steps:
           - pull_request
 
   - name: publish-snapshot-package
-    image: maven:3-jdk-11
+    image: maven:3-jdk-11-slim
     environment :
       DEPLOYER_USERNAME :
         from_secret : DEPLOYER_USERNAME
@@ -48,7 +48,7 @@ steps:
           - pull_request
 
   - name: publish-release-package
-    image: maven:3-jdk-11
+    image: maven:3-jdk-11-slim
     environment :
       DEPLOYER_USERNAME :
         from_secret : DEPLOYER_USERNAME
