@@ -4,7 +4,7 @@ build :
   relativePath : ${SWAGGER_RELATIVE_PATH:}
 spring :
   application :
-    name : sample-hello-world-rest
+    name : sample-rest-hello-world
   security :
     users :
       admin :

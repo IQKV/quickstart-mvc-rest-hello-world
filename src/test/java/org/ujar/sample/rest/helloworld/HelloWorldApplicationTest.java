@@ -1,4 +1,4 @@
-package org.ujar.sample.helloworldrest;
+package org.ujar.sample.rest.helloworld;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

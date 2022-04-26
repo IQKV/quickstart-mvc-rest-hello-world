@@ -1,6 +1,6 @@
 # Hello, World! - Sample Restful Application
 
-[![Build Status](https://drone.ujar.org/api/badges/ujar-org/sample-hello-world-rest/status.svg?ref=refs/heads/main)](https://drone.ujar.org/ujar-org/sample-hello-world-rest)
+[![Build Status](https://drone.ujar.org/api/badges/ujar-org/sample-rest-hello-world/status.svg?ref=refs/heads/main)](https://drone.ujar.org/ujar-org/sample-rest-hello-world)
 
 Minimal Spring Boot based RESTful 'Hello World' example, including Swagger.
 
@@ -22,8 +22,8 @@ This application is a [Spring Boot](https://spring.io/guides/gs/spring-boot) app
 using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line:
 
 ```
-git clone https://github.com/ujar-org/sample-hello-world-rest.git
-cd sample-hello-world-rest
+git clone https://github.com/ujar-org/sample-rest-hello-world.git
+cd sample-rest-hello-world
 ./mvnw package
 java -jar target/*.jar
 ```
@@ -35,7 +35,7 @@ You can then access Swagger UI here: http://localhost:8080/swagger-ui.html
 1) On the command line
 
 ```
-git clone https://github.com/ujar-org/sample-hello-world-rest.git
+git clone https://github.com/ujar-org/sample-rest-hello-world.git
 ```
 
 2) Inside IDE

@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.ujar.sample</groupId>
-    <artifactId>sample-hello-world-rest</artifactId>
+    <artifactId>sample-rest-hello-world</artifactId>
     <version>0.0.7-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>sample-hello-world-rest</name>
-    <description>This backend version of the Spring application only provides a very simple REST API.</description>
+    <name>sample-rest-hello-world</name>
+    <description>This backend version of the Spring application only provides a very simple REST API response.</description>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -32,7 +32,7 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/ujar-org/sample-hello-world-rest.git</connection>
+        <connection>scm:git:https://github.com/ujar-org/sample-rest-hello-world.git</connection>
         <tag>HEAD</tag>
     </scm>
 

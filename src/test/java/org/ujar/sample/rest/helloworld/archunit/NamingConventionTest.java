@@ -1,4 +1,4 @@
-package org.ujar.sample.helloworldrest.archunit;
+package org.ujar.sample.rest.helloworld.archunit;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 
-@AnalyzeClasses(packages = "org.ujar.sample.helloworldrest")
+@AnalyzeClasses(packages = "org.ujar.sample.rest.helloworldrest")
 public class NamingConventionTest {
 
   @ArchTest

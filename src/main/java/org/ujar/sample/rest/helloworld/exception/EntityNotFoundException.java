@@ -1,4 +1,4 @@
-package org.ujar.sample.helloworldrest.exception;
+package org.ujar.sample.rest.helloworld.exception;
 
 public class EntityNotFoundException extends RuntimeException {
 

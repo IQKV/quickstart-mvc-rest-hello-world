@@ -1,4 +1,4 @@
-package org.ujar.sample.helloworldrest.config;
+package org.ujar.sample.rest.helloworld.config;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

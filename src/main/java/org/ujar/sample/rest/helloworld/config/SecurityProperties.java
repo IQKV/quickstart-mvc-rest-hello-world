@@ -1,4 +1,4 @@
-package org.ujar.sample.helloworldrest.config;
+package org.ujar.sample.rest.helloworld.config;
 
 import java.util.HashMap;
 import java.util.Map;

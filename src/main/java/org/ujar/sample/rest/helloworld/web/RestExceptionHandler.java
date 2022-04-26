@@ -1,4 +1,4 @@
-package org.ujar.sample.helloworldrest.web;
+package org.ujar.sample.rest.helloworld.web;
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import java.util.Arrays;
@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-import org.ujar.sample.helloworldrest.dto.ErrorResponse;
-import org.ujar.sample.helloworldrest.exception.EntityAlreadyExistsException;
-import org.ujar.sample.helloworldrest.exception.EntityNotFoundException;
+import org.ujar.sample.rest.helloworld.dto.ErrorResponse;
+import org.ujar.sample.rest.helloworld.exception.EntityAlreadyExistsException;
+import org.ujar.sample.rest.helloworld.exception.EntityNotFoundException;
 
 @ControllerAdvice
 @ResponseBody

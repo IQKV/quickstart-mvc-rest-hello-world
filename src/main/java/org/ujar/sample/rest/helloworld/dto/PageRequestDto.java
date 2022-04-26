@@ -1,4 +1,4 @@
-package org.ujar.sample.helloworldrest.dto;
+package org.ujar.sample.rest.helloworld.dto;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Schema;

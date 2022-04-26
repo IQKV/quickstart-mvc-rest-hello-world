@@ -1,4 +1,4 @@
-package org.ujar.sample.helloworldrest.dto;
+package org.ujar.sample.rest.helloworld.dto;
 
 public class Greeting {
   public String getMessage() {

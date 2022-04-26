@@ -1,4 +1,4 @@
-package org.ujar.sample.helloworldrest.archunit;
+package org.ujar.sample.rest.helloworld.archunit;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.fields;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
@@ -18,7 +18,7 @@ import com.tngtech.archunit.lang.ArchRule;
 import com.tngtech.archunit.lang.CompositeArchRule;
 import org.slf4j.Logger;
 
-@AnalyzeClasses(packages = "org.ujar.sample.helloworldrest")
+@AnalyzeClasses(packages = "org.ujar.sample.rest.helloworldrest")
 class CodingRulesTest {
   @ArchTest
   private final ArchRule noClassesShouldAccessStandardStreams = NO_CLASSES_SHOULD_ACCESS_STANDARD_STREAMS;
