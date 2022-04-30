@@ -1,6 +1,6 @@
 spring :
   application :
-    name : sample-rest-hello-world
+    name : basics-rest-hello-world
   security :
     users :
       admin :

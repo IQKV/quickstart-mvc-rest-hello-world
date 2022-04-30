@@ -26,7 +26,7 @@ steps:
     commands:
         - rm -rf /root/.m2/repository/org/ujar/
         - mvn compile test-compile com.github.spotbugs:spotbugs-maven-plugin:check pmd:check -Dspotbugs.xmlOutput=true -Dspotbugs.failOnError=false -Dspotbugs.includeTests=true -B -s settings.xml -Ddeployer.username=$DEPLOYER_USERNAME -Ddeployer.password=$DEPLOYER_PASSWORD
-        - mvn org.jacoco:jacoco-maven-plugin:prepare-agent clean package org.jacoco:jacoco-maven-plugin:report sonar:sonar -Dsonar.host.url=$SONAR_HOST -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=ujar-org:sample-rest-hello-world -Dsonar.projectName=ujar-org:sample-rest-hello-world --batch-mode -s settings.xml -Ddeployer.username=$DEPLOYER_USERNAME -Ddeployer.password=$DEPLOYER_PASSWORDASSWORD
+        - mvn org.jacoco:jacoco-maven-plugin:prepare-agent clean package org.jacoco:jacoco-maven-plugin:report sonar:sonar -Dsonar.host.url=$SONAR_HOST -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=ujar-org:basics-rest-hello-world -Dsonar.projectName=ujar-org:basics-rest-hello-world --batch-mode -s settings.xml -Ddeployer.username=$DEPLOYER_USERNAME -Ddeployer.password=$DEPLOYER_PASSWORDASSWORD
     when:
       branch:
         include:
@@ -82,7 +82,7 @@ steps:
         from_secret: DOCKER_USERNAME
       password:
         from_secret: DOCKER_PASSWORD
-      repo: docker-registry.ujar.org/ujar/sample-rest-hello-world
+      repo: docker-registry.ujar.org/ujar/basics-rest-hello-world
       registry: docker-registry.ujar.org
       tags :
         - latest

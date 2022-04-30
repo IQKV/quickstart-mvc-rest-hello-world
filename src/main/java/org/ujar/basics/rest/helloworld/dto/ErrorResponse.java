@@ -1,4 +1,4 @@
-package org.ujar.sample.rest.helloworld.dto;
+package org.ujar.basics.rest.helloworld.dto;
 
 import java.util.List;
 import lombok.Value;

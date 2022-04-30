@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.ujar.sample.rest</groupId>
+    <groupId>org.ujar.basics.rest</groupId>
     <artifactId>hello-world</artifactId>
     <version>0.0.7-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>sample-rest-hello-world</name>
+    <name>basics-rest-hello-world</name>
     <description>This backend version of the Spring application only provides a very simple REST API response.</description>
     <licenses>
         <license>
@@ -32,7 +32,7 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/ujar-org/sample-rest-hello-world.git</connection>
+        <connection>scm:git:https://github.com/ujar-org/basics-rest-hello-world.git</connection>
         <tag>HEAD</tag>
     </scm>
 

@@ -1,4 +1,4 @@
-package org.ujar.sample.rest.helloworld.exception;
+package org.ujar.basics.rest.helloworld.exception;
 
 public class EntityAlreadyExistsException extends RuntimeException {
 

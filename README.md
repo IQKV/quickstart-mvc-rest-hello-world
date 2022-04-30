@@ -1,7 +1,7 @@
 # Hello, World! - Sample Restful Application
 
-[![Build Status](https://drone.ujar.org/api/badges/ujar-org/sample-rest-hello-world/status.svg?ref=refs/heads/main)](https://drone.ujar.org/ujar-org/sample-rest-hello-world)
-[![Quality Gate Status](https://sonarqube.ujar.org/api/project_badges/measure?project=ujar-org%3Asample-rest-hello-world&metric=alert_status&token=3ddc693332afc4214a0eaa6216e0293fa851c3c3)](https://sonarqube.ujar.org/dashboard?id=ujar-org%3Asample-rest-hello-world)
+[![Build Status](https://drone.ujar.org/api/badges/ujar-org/basics-rest-hello-world/status.svg?ref=refs/heads/main)](https://drone.ujar.org/ujar-org/basics-rest-hello-world)
+[![Quality Gate Status](https://sonarqube.ujar.org/api/project_badges/measure?project=ujar-org%3Abasics-rest-hello-world&metric=alert_status&token=3ddc693332afc4214a0eaa6216e0293fa851c3c3)](https://sonarqube.ujar.org/dashboard?id=ujar-org%3Abasics-rest-hello-world)
 
 Minimal Spring Boot based RESTful 'Hello World' example, including Swagger.
 
@@ -23,8 +23,8 @@ This application is a [Spring Boot](https://spring.io/guides/gs/spring-boot) app
 using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line:
 
 ```
-git clone https://github.com/ujar-org/sample-rest-hello-world.git
-cd sample-rest-hello-world
+git clone https://github.com/ujar-org/basics-rest-hello-world.git
+cd basics-rest-hello-world
 ./mvnw package
 java -jar target/*.jar
 ```
@@ -36,7 +36,7 @@ You can then access Swagger UI here: http://localhost:8080/swagger-ui.html
 1) On the command line
 
 ```
-git clone https://github.com/ujar-org/sample-rest-hello-world.git
+git clone https://github.com/ujar-org/basics-rest-hello-world.git
 ```
 
 2) Inside IDE

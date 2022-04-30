@@ -1,4 +1,4 @@
-package org.ujar.sample.rest.helloworld.config;
+package org.ujar.basics.rest.helloworld.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
