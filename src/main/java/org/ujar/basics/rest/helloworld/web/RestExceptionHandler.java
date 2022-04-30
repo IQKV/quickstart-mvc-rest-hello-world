@@ -20,8 +20,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import org.ujar.basics.rest.helloworld.dto.ErrorResponse;
-import org.ujar.basics.rest.helloworld.exception.EntityAlreadyExistsException;
-import org.ujar.basics.rest.helloworld.exception.EntityNotFoundException;
 
 @ControllerAdvice
 @ResponseBody
@@ -99,21 +97,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
             .format("Property path: \"%s\": %s", violation.getPropertyPath(), violation.getMessage()))
         .map(ErrorResponse.Error::new)
         .toList();
-    return new ErrorResponse(errors);
-  }
-
-  // Custom exception handling
-  @ExceptionHandler(EntityNotFoundException.class)
-  @ResponseStatus(HttpStatus.NOT_FOUND)
-  public ErrorResponse entityNotFoundException(EntityNotFoundException exception) {
-    var errors = List.of(new ErrorResponse.Error(exception.getMessage()));
-    return new ErrorResponse(errors);
-  }
-
-  @ExceptionHandler(EntityAlreadyExistsException.class)
-  @ResponseStatus(HttpStatus.CONFLICT)
-  public ErrorResponse entityAlreadyExistsException(EntityAlreadyExistsException exception) {
-    var errors = List.of(new ErrorResponse.Error(exception.getMessage()));
     return new ErrorResponse(errors);
   }
 }
