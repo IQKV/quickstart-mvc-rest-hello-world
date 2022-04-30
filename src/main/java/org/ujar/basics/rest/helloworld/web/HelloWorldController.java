@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.ujar.basics.rest.helloworld.dto.ErrorResponse;
-import org.ujar.basics.rest.helloworld.dto.Greeting;
+import org.ujar.basics.rest.helloworld.dto.GreetingDto;
 
 @RestController
 @Tag(name = "Hello World controller", description = "API for greeting")
@@ -35,8 +35,8 @@ public class HelloWorldController {
                        description = "Bad request",
                        content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
       })
-  public ResponseEntity<Greeting> getGreeting() {
-    var greeting = new Greeting();
+  public ResponseEntity<GreetingDto> getGreeting() {
+    var greeting = new GreetingDto();
     log.info("Send RESTFul API Response with {} message.", greeting.getMessage());
     return new ResponseEntity<>(greeting, HttpStatus.OK);
   }

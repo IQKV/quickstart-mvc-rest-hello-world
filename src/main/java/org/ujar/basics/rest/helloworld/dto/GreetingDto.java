@@ -1,7 +1,6 @@
 package org.ujar.basics.rest.helloworld.dto;
 
-public class Greeting {
-  
+public record GreetingDto() {
   private static final String MESSAGE = "Hello, World!";
   
   public String getMessage() {
