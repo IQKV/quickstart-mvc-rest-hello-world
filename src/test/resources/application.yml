@@ -6,6 +6,3 @@ spring :
       admin :
         name : admin
         password : admin
-      editor :
-        name : editor
-        password : editor
