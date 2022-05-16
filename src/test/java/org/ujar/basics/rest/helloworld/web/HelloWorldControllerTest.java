@@ -25,7 +25,7 @@ class HelloWorldControllerTest {
   @Test
   void getGreeting_Success() throws Exception {
     mockMvc.perform(
-            get("/v1/hello-world"))
+            get("/api/v1/hello-world"))
         .andDo(print())
         .andExpect(status().isOk())
         .andExpect(content().json(

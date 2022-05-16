@@ -17,7 +17,7 @@ import org.ujar.starter.rest.web.dto.ErrorResponse;
 
 @RestController
 @Tag(name = "Hello World controller", description = "API for greeting")
-@RequestMapping("/v1/hello-world")
+@RequestMapping("/api/v1/hello-world")
 @Validated
 @Slf4j
 public class HelloWorldController {
