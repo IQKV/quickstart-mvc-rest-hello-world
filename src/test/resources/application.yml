@@ -1,8 +1,3 @@
 spring :
   application :
-    name : basics-rest-hello-world
-  security :
-    users :
-      admin :
-        name : admin
-        password : admin
+    name : basics-restful-hello-world

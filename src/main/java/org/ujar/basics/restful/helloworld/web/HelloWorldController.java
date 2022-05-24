@@ -1,4 +1,4 @@
-package org.ujar.basics.rest.helloworld.web;
+package org.ujar.basics.restful.helloworld.web;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -12,8 +12,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.ujar.basics.rest.helloworld.dto.GreetingDto;
-import org.ujar.starter.rest.web.dto.ErrorResponse;
+import org.ujar.basics.restful.helloworld.dto.GreetingDto;
+import org.ujar.boot.starter.restful.web.dto.ErrorResponse;
 
 @RestController
 @Tag(name = "Hello World controller", description = "API for greeting")

@@ -1,4 +1,4 @@
-package org.ujar.basics.rest.helloworld.dto;
+package org.ujar.basics.restful.helloworld.dto;
 
 public record GreetingDto() {
   private static final String MESSAGE = "Hello, World!";

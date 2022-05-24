@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.ujar.basics.rest</groupId>
+    <groupId>org.ujar.basics.restful</groupId>
     <artifactId>hello-world</artifactId>
-    <version>0.0.7-SNAPSHOT</version>
+    <version>0.7.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>basics-rest-hello-world</name>
+    <name>basics-restful-hello-world</name>
     <description>This backend version of the Spring application only provides a very simple REST API response.</description>
     <licenses>
         <license>
@@ -32,14 +32,14 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/ujar-org/basics-rest-hello-world.git</connection>
+        <connection>scm:git:https://github.com/ujar-org/basics-restful-hello-world.git</connection>
         <tag>HEAD</tag>
     </scm>
 
     <parent>
-        <groupId>org.ujar.bom</groupId>
-        <artifactId>parent-pom-rest</artifactId>
-        <version>0.0.7-SNAPSHOT</version>
+        <groupId>org.ujar.parent</groupId>
+        <artifactId>ujar-parent-pom</artifactId>
+        <version>0.7.0-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -58,25 +58,20 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!--    Use undertow as servlet container    -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.ujar.starter</groupId>
-            <artifactId>starter-rest</artifactId>
-            <version>0.0.7-SNAPSHOT</version>
-        </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <groupId>org.ujar.boot</groupId>
+            <artifactId>ujar-boot-starter-logbook</artifactId>
+            <version>0.7.0-SNAPSHOT</version>
         </dependency>
-
         <dependency>
-            <groupId>org.zalando</groupId>
-            <artifactId>logbook-spring-boot-starter</artifactId>
+            <groupId>org.ujar.boot</groupId>
+            <artifactId>ujar-boot-starter-restful</artifactId>
+            <version>0.7.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>

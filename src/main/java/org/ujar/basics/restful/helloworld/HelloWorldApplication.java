@@ -1,4 +1,4 @@
-package org.ujar.basics.rest.helloworld;
+package org.ujar.basics.restful.helloworld;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

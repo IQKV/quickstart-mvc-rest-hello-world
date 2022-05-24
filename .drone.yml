@@ -1,7 +1,13 @@
 kind: pipeline
-name: build
-
+name: CI
 type : docker
+
+trigger:
+  branch:
+    - main
+    - feature/*
+  event:
+    - push
 
 volumes:
   - name: m2cache
@@ -9,7 +15,7 @@ volumes:
       path: /var/cache/m2cache
 steps:
 
-  - name: test
+  - name: build
     image: maven:3-openjdk-17-slim
     volumes:
       - name: m2cache
@@ -24,20 +30,20 @@ steps:
       SONAR_TOKEN :
         from_secret : SONAR_TOKEN
     commands:
-        - rm -rf /root/.m2/repository/org/ujar/
-        - mvn compile test-compile com.github.spotbugs:spotbugs-maven-plugin:check pmd:check -Dspotbugs.xmlOutput=true -Dspotbugs.failOnError=false -Dspotbugs.includeTests=true -B -s settings.xml -Ddeployer.username=$DEPLOYER_USERNAME -Ddeployer.password=$DEPLOYER_PASSWORD
-        - mvn org.jacoco:jacoco-maven-plugin:prepare-agent clean package org.jacoco:jacoco-maven-plugin:report sonar:sonar -Dsonar.host.url=$SONAR_HOST -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=ujar-org:basics-rest-hello-world -Dsonar.projectName=ujar-org:basics-rest-hello-world --batch-mode -s settings.xml -Ddeployer.username=$DEPLOYER_USERNAME -Ddeployer.password=$DEPLOYER_PASSWORDASSWORD
+      - rm -rf /root/.m2/repository/org/ujar/
+      - mvn clean compile test-compile -B  --file pom.xml -s settings.xml -Ddeployer.username=$DEPLOYER_USERNAME -Ddeployer.password=$DEPLOYER_PASSWORD
+      - mvn pmd:check -B --file pom.xml -s settings.xml -Ddeployer.username=$DEPLOYER_USERNAME -Ddeployer.password=$DEPLOYER_PASSWORD
+      - mvn com.github.spotbugs:spotbugs-maven-plugin:check -Dspotbugs.xmlOutput=true -Dspotbugs.failOnError=true -Dspotbugs.includeTests=true  --file pom.xml -s settings.xml -Ddeployer.username=$DEPLOYER_USERNAME -Ddeployer.password=$DEPLOYER_PASSWORD
+      - mvn org.jacoco:jacoco-maven-plugin:prepare-agent package org.jacoco:jacoco-maven-plugin:report sonar:sonar -Dsonar.host.url=$SONAR_HOST -Dsonar.login=$SONAR_TOKEN -Dsonar.projectKey=ujar-org:basics-restful-hello-world -Dsonar.projectName=ujar-org:basics-restful-hello-world --batch-mode  --file pom.xml -s settings.xml -Ddeployer.username=$DEPLOYER_USERNAME -Ddeployer.password=$DEPLOYER_PASSWORD
     when:
       branch:
         include:
           - feature/*
           - main
-      event:
-        include:
-          - push
-          - pull_request
 
   - name: publish-snapshot-package
+    depends_on :
+      - build
     image: maven:3-openjdk-17-slim
     volumes:
       - name: m2cache
@@ -54,12 +60,10 @@ steps:
         include:
           - feature/*
           - main
-      event:
-        include:
-          - push
-          - pull_request
 
   - name: publish-release-package
+    depends_on :
+      - build
     image: maven:3-openjdk-17-slim
     volumes:
       - name: m2cache
@@ -75,6 +79,8 @@ steps:
       event: tag
 
   - name: docker-build-dev-image
+    depends_on :
+      - publish-snapshot-package
     image: plugins/docker
     settings:
       dockerfile: src/main/docker/Dockerfile
@@ -84,7 +90,7 @@ steps:
         from_secret: DOCKER_USERNAME
       password:
         from_secret: DOCKER_PASSWORD
-      repo: docker-registry.ujar.org/ujar/basics-rest-hello-world
+      repo: docker-registry.ujar.org/ujar/basics-restful-hello-world
       registry: docker-registry.ujar.org
       tags :
         - latest
@@ -93,8 +99,3 @@ steps:
         include:
           - feature/*
           - main
-      event:
-        include:
-          - push
-          - pull_request
-
