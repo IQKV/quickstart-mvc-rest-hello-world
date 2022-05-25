@@ -22,7 +22,7 @@ class HelloWorldControllerTest {
 
   @SneakyThrows
   @Test
-  void getGreeting_Success() {
+  void shouldReceiveHelloWorldMessage() {
     mockMvc.perform(
             get("/api/v1/hello-world"))
         .andDo(print())
