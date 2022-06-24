@@ -1,3 +1,9 @@
 spring :
   application :
     name : basics-restful-hello-world
+  devtools :
+    add-properties : false
+    restart :
+      enabled : false
+    livereload :
+      enabled : false

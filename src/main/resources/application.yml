@@ -5,6 +5,12 @@ spring :
     default-property-inclusion : NON_NULL
   lifecycle :
     timeout-per-shutdown-phase : ${TIMEOUT_PER_SHUTDOWN:20s}
+  devtools :
+    add-properties : false
+    restart :
+      enabled : false
+    livereload :
+      enabled : false
 logging :
   level :
     ROOT : INFO
@@ -21,10 +27,10 @@ logbook :
     - /swagger-ui/**
     - /swagger-resources/**
     - /metrics
-  filter:
+  filter :
     enabled : true
-  format:
-     style : json
+  format :
+    style : json
   obfuscate :
     headers :
       - Authorization
