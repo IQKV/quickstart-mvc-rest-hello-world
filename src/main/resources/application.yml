@@ -1,76 +1,71 @@
-
+build :
+  description : '@project.description@'
+  relative-path : ${SWAGGER_RELATIVE_PATH:}
+  version : '@project.version@'
 git :
-  commit : '@git.commit.id@'
   build_time : '@git.build.time@'
-
+  commit : '@git.commit.id@'
 info :
   app :
-    name : @project.name@
-    description : @project.description@
-    version : @project.version@
-    git_commit : ${git.commit}
     build_time : ${git.build_time}
-
-spring :
-  application :
-    name : basics-restful-hello-world
-  jackson :
-    default-property-inclusion : NON_NULL
-  lifecycle :
-    timeout-per-shutdown-phase : ${TIMEOUT_PER_SHUTDOWN:20s}
-  devtools :
-    add-properties : false
-    restart :
-      enabled : false
-    livereload :
-      enabled : false
-logging :
-  level :
-    ROOT : INFO
-  pattern :
-    console : "${spring.application.name} %clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr([%X{transactionId},%X{traceId:-},%X{spanId:-}]){blue}[%thread] %clr(%-5level) %clr(%logger{36}){magenta} - %msg%n"
-
-server :
-  port : ${SERVER_PORT:8080}
-  shutdown : graceful
+    description : '@project.description@'
+    git_commit : ${git.commit}
+    name : '@project.name@'
+    version : '@project.version@'
 logbook :
-  exclude :
-    - /actuator/**
-    - /v3/**
-    - /swagger-ui/**
-    - /swagger-resources/**
-    - /metrics
+  exclude : '[/actuator/**, /v3/**, /swagger-ui/**, /swagger-resources/**, /metrics]'
   filter :
     enabled : true
   format :
     style : json
-  obfuscate :
-    headers :
-      - Authorization
-      - X-Secret
-    parameters :
-      - access_token
-      - password
   minimum-status : ${MINIMUM_STATUS_LOG_BODY:400}
-
+  obfuscate :
+    headers : '[Authorization, X-Secret]'
+    parameters : '[access_token, password]'
+logging :
+  level :
+    ROOT : INFO
+  pattern :
+    console : ${spring.application.name} %clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint}
+      %clr([%X{transactionId},%X{traceId:-},%X{spanId:-}]){blue}[%thread] %clr(%-5level)
+      %clr(%logger{36}){magenta} - %msg%n
 management :
-  server :
-    add-application-context-header : true
-  endpoints :
-    enabled-by-default : false
-    web :
-      path-mapping :
-        health : actuator/health
-        prometheus : metrics
-        info : info
-      base-path : /
-      exposure :
-        include : health, prometheus, info
   endpoint :
     health :
       enabled : true
       show-details : always
-    prometheus :
-      enabled : true
     info :
       enabled : true
+    prometheus :
+      enabled : true
+  endpoints :
+    enabled-by-default : false
+    web :
+      base-path : /
+      exposure :
+        include : health, prometheus, info
+      path-mapping :
+        health : actuator/health
+        info : info
+        prometheus : metrics
+  info :
+    env :
+      enabled : true
+  server :
+    add-application-context-header : true
+server :
+  port : ${SERVER_PORT:8080}
+  shutdown : graceful
+spring :
+  application :
+    name : basics-restful-hello-world
+  devtools :
+    add-properties : false
+    livereload :
+      enabled : false
+    restart :
+      enabled : false
+  jackson :
+    default-property-inclusion : NON_NULL
+  lifecycle :
+    timeout-per-shutdown-phase : ${TIMEOUT_PER_SHUTDOWN:20s}

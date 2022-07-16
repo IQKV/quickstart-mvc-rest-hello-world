@@ -1,10 +1,10 @@
+management:
+    endpoints:
+        enabled-by-default: true
 spring:
-  devtools :
-    add-properties : true
-    restart :
-      enabled : true
-    livereload :
-      enabled : true
-management :
-  endpoints :
-    enabled-by-default : true
+    devtools:
+        add-properties: true
+        livereload:
+            enabled: true
+        restart:
+            enabled: true
