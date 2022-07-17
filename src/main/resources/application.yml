@@ -26,9 +26,7 @@ logging :
   level :
     ROOT : INFO
   pattern :
-    console : ${spring.application.name} %clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint}
-      %clr([%X{transactionId},%X{traceId:-},%X{spanId:-}]){blue}[%thread] %clr(%-5level)
-      %clr(%logger{36}){magenta} - %msg%n
+    console : ${spring.application.name} %clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr([%X{transactionId},%X{traceId:-},%X{spanId:-}]){blue}[%thread] %clr(%-5level) %clr(%logger{36}){magenta} - %msg%n
 management :
   endpoint :
     health :
