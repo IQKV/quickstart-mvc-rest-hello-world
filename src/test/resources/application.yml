@@ -1,6 +1,6 @@
 build :
   description : '@project.description@'
-  relative-path : ${SWAGGER_RELATIVE_PATH:}
+  relative-path : ''
   version : '@project.version@'
 spring :
   application :
