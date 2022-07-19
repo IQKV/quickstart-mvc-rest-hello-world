@@ -24,7 +24,7 @@ logbook :
     parameters : '[access_token, password]'
 logging :
   level :
-    ROOT : INFO
+    ROOT : ${LOGGING_LEVEL_ROOT:INFO}
     org.zalando.logbook.Logbook : TRACE
 management :
   endpoint :
