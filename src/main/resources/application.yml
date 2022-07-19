@@ -31,6 +31,7 @@ management :
     health :
       enabled : true
       show-details : always
+
     info :
       enabled : true
     prometheus :
@@ -41,10 +42,6 @@ management :
       base-path : /
       exposure :
         include : health, prometheus, info
-      path-mapping :
-        health : actuator/health
-        info : info
-        prometheus : metrics
   info :
     env :
       enabled : true
