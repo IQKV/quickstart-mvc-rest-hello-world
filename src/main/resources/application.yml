@@ -27,6 +27,11 @@ logging :
     ROOT : ${LOGGING_LEVEL_ROOT:INFO}
     org.zalando.logbook.Logbook : TRACE
 management :
+  health :
+    livenessstate :
+      enabled : true
+    readinessstate :
+      enabled : true
   endpoint :
     health :
       enabled : true
