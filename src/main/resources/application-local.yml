@@ -1,6 +1,24 @@
-management:
-    endpoints:
-        enabled-by-default: true
+management :
+  endpoint :
+    health :
+      enabled : true
+      show-details : always
+      probes :
+        enabled : true
+    info :
+      enabled : true
+    prometheus :
+      enabled : true
+  endpoints :
+    enabled-by-default : false
+    web :
+      exposure :
+        include : health, prometheus, info
+  info :
+    env :
+      enabled : true
+  server :
+    add-application-context-header : true
 spring:
     devtools:
         add-properties: true
