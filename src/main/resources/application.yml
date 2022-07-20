@@ -13,15 +13,23 @@ info :
     name : '@project.name@'
     version : '@project.version@'
 logbook :
-  exclude : '[/actuator/**, /v3/**, /swagger-ui/**, /swagger-resources/**]'
+  exclude :
+    - /actuator/**
+    - /v3/**
+    - /swagger-ui/**
+    - /swagger-resources/**
   filter :
     enabled : true
   format :
     style : json
   minimum-status : ${MINIMUM_STATUS_LOG_BODY:400}
   obfuscate :
-    headers : '[Authorization, X-Secret]'
-    parameters : '[access_token, password]'
+    headers :
+      - Authorization
+      - X-Secret
+    parameters :
+      - access_token
+      - password
 logging :
   level :
     ROOT : ${LOGGING_LEVEL_ROOT:INFO}
