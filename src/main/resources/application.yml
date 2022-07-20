@@ -70,7 +70,7 @@ spring :
     timeout-per-shutdown-phase : ${TIMEOUT_PER_SHUTDOWN:20s}
 
 springdoc :
-  show-actuator: true
-  swagger-ui:
-    config-url : ${SWAGGER_RELATIVE_PATH:}/v3/api-docs/swagger-config
-    url : ${SWAGGER_RELATIVE_PATH:}/v3/api-docs
+  show-actuator : true
+  swagger-ui :
+    config-url : ${SWAGGER_RELATIVE_PATH:/}v3/api-docs/swagger-config
+    url : ${SWAGGER_RELATIVE_PATH:/}v3/api-docs
