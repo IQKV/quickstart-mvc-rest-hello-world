@@ -21,7 +21,9 @@ spec :
           image : docker-registry.ujar.org/ujar/basics-restful-hello-world:latest
           imagePullPolicy: Always
           ports :
-            - containerPort : 8080
+            - name: "http"
+              containerPort : 8080
+              hostPort: 8080
           env :
             - name : SERVER_SERVLET_CONTEXT_PATH
               valueFrom :
@@ -32,7 +34,7 @@ spec :
               valueFrom :
                 configMapKeyRef :
                   name : hello-world
-                  key : servlet-context-path
+                  key : swagger_relative_path
             - name : LOGGING_LEVEL_ROOT
               valueFrom :
                 configMapKeyRef :
@@ -76,7 +78,8 @@ metadata :
     app : hello-world
 spec :
   ports :
-    - port : 8080
+    - name : "web"
+      port : 8080
       targetPort : 8080
       protocol : TCP
   selector :

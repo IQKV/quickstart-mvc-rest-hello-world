@@ -10,3 +10,5 @@ kubectl config use-context $CLUSTER_NAME
 kubectl delete -n $K8S_NAMESPACE deployment hello-world
 kubectl delete -n $K8S_NAMESPACE service hello-world
 kubectl delete -n $K8S_NAMESPACE configmap hello-world
+
+kubectl delete -n $K8S_NAMESPACE ingress gateway-ingress

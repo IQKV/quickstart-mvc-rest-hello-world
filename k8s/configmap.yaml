@@ -3,5 +3,6 @@ kind : ConfigMap
 metadata :
   name : hello-world
 data :
-  servlet-context-path : /importer
-  logging-level-root: TRACE
+  servlet-context-path : ""
+  swagger_relative_path : "/hello/"
+  logging-level-root: INFO
