@@ -4,5 +4,5 @@ metadata :
   name : hello-world
 data :
   servlet-context-path : ""
-  swagger_relative_path : "/hello/"
+  swagger-ui-relative-path : "/hello/"
   logging-level-root: INFO

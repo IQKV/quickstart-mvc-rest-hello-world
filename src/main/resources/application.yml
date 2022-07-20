@@ -1,6 +1,6 @@
 build :
   description : '@project.description@'
-  relative-path : ${SWAGGER_RELATIVE_PATH:}
+  relative-path : ${SWAGGER_UI_RELATIVE_PATH:}
   version : '@project.version@'
 git :
   build_time : '@git.build.time@'
@@ -80,5 +80,5 @@ spring :
 springdoc :
   show-actuator : true
   swagger-ui :
-    config-url : ${SWAGGER_RELATIVE_PATH:/}v3/api-docs/swagger-config
-    url : ${SWAGGER_RELATIVE_PATH:/}v3/api-docs
+    config-url : ${SWAGGER_UI_RELATIVE_PATH:/}v3/api-docs/swagger-config
+    url : ${SWAGGER_UI_RELATIVE_PATH:/}v3/api-docs

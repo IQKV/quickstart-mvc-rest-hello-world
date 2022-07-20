@@ -30,11 +30,11 @@ spec :
                 configMapKeyRef :
                   name : hello-world
                   key : servlet-context-path
-            - name : SWAGGER_RELATIVE_PATH
+            - name : SWAGGER_UI_RELATIVE_PATH
               valueFrom :
                 configMapKeyRef :
                   name : hello-world
-                  key : swagger_relative_path
+                  key : swagger-ui-relative-path
             - name : LOGGING_LEVEL_ROOT
               valueFrom :
                 configMapKeyRef :
