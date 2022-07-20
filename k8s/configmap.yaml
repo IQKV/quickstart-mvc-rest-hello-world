@@ -1,0 +1,7 @@
+apiVersion : v1
+kind : ConfigMap
+metadata :
+  name : hello-world
+data :
+  servlet-context-path : /importer
+  logging-level-root: TRACE

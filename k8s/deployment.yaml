@@ -1,0 +1,83 @@
+apiVersion : apps/v1
+kind : Deployment
+metadata :
+  name : hello-world
+  labels :
+    app : hello-world
+spec :
+  replicas : 1
+  strategy :
+    type : RollingUpdate
+  selector :
+    matchLabels :
+      app : hello-world
+  template :
+    metadata :
+      labels :
+        app : hello-world
+    spec :
+      containers :
+        - name : hello-world
+          image : docker-registry.ujar.org/ujar/micro-k8s-bookingdb-hello-world:latest
+          imagePullPolicy: Always
+          ports :
+            - containerPort : 8080
+          env :
+            - name : SERVER_SERVLET_CONTEXT_PATH
+              valueFrom :
+                configMapKeyRef :
+                  name : hello-world
+                  key : servlet-context-path
+            - name : SWAGGER_RELATIVE_PATH
+              valueFrom :
+                configMapKeyRef :
+                  name : hello-world
+                  key : servlet-context-path
+            - name : LOGGING_LEVEL_ROOT
+              valueFrom :
+                configMapKeyRef :
+                  name : hello-world
+                  key : logging-level-root
+          resources :
+            requests :
+              cpu : "0.2"
+              memory : 600Mi
+            limits :
+              cpu : "1.0"
+              memory : 600Mi
+          readinessProbe :
+            httpGet :
+              port : 8080
+              path: /actuator/health/readiness
+            initialDelaySeconds : 120
+            timeoutSeconds : 120
+            periodSeconds : 50
+            failureThreshold : 10
+          livenessProbe :
+            httpGet:
+              port: 8080
+              path: /actuator/health/liveness
+            initialDelaySeconds : 120
+            timeoutSeconds : 120
+            periodSeconds : 50
+            failureThreshold : 10
+          startupProbe:
+            httpGet:
+              port: 8080
+              path: /actuator/health/readiness
+            initialDelaySeconds: 120
+      serviceAccountName : api-service-account
+---
+apiVersion : v1
+kind : Service
+metadata :
+  name : hello-world
+  labels :
+    app : hello-world
+spec :
+  ports :
+    - port : 8080
+      targetPort : 8080
+      protocol : TCP
+  selector :
+    app : hello-world
