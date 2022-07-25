@@ -25,11 +25,6 @@ spec :
               containerPort : 8080
               hostPort: 8080
           env :
-            - name : SERVER_SERVLET_CONTEXT_PATH
-              valueFrom :
-                configMapKeyRef :
-                  name : hello-world
-                  key : servlet-context-path
             - name : SWAGGER_UI_RELATIVE_PATH
               valueFrom :
                 configMapKeyRef :

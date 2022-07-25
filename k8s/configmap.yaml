@@ -3,6 +3,5 @@ kind : ConfigMap
 metadata :
   name : hello-world
 data :
-  servlet-context-path : ""
   swagger-ui-relative-path : "/hello/"
   logging-level-root: INFO
