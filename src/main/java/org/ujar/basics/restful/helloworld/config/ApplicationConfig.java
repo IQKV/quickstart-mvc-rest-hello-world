@@ -7,5 +7,5 @@ import org.ujar.boot.starter.logbook.LogbookResponseOnStatus;
 @Configuration
 @LogbookResponseOnStatus
 @LogbookJsonBodyFilter
-public class ApplicationConfig {
+class ApplicationConfig {
 }
