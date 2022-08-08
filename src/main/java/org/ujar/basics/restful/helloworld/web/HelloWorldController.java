@@ -20,7 +20,7 @@ import org.ujar.boot.starter.restful.web.dto.ErrorResponse;
 @RequestMapping("/api/v1/hello-world")
 @Validated
 @Slf4j
-public class HelloWorldController {
+class HelloWorldController {
 
   @GetMapping
   @Operation(
@@ -35,7 +35,7 @@ public class HelloWorldController {
                        description = "Bad request",
                        content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
       })
-  public ResponseEntity<GreetingDto> getGreeting() {
+  ResponseEntity<GreetingDto> getGreeting() {
     var greeting = new GreetingDto();
     log.info("Send RESTFul API Response with {} message.", greeting.getMessage());
     return new ResponseEntity<>(greeting, HttpStatus.OK);
