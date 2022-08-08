@@ -36,7 +36,7 @@ class HelloWorldController {
                        content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
       })
   ResponseEntity<GreetingDto> getGreeting() {
-    var greeting = new GreetingDto();
+    final var greeting = new GreetingDto();
     log.info("Send RESTFul API Response with {} message.", greeting.getMessage());
     return new ResponseEntity<>(greeting, HttpStatus.OK);
   }
