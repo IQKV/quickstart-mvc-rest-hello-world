@@ -157,19 +157,19 @@
         <repository>
             <id>ujar-releases-repository</id>
             <name>ujar-public</name>
-            <url>https://nexus.ujar.org/repository/maven-releases</url>
+            <url>https://nexus.c2a2.com/repository/maven-releases</url>
         </repository>
         <snapshotRepository>
             <id>ujar-snapshots-repository</id>
             <name>ujar-public</name>
-            <url>https://nexus.ujar.org/repository/maven-snapshots</url>
+            <url>https://nexus.c2a2.com/repository/maven-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
     <repositories>
         <repository>
             <name>ujar-public</name>
             <id>ujar-maven-central</id>
-            <url>https://nexus.ujar.org/repository/maven-central</url>
+            <url>https://nexus.c2a2.com/repository/maven-central</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -181,7 +181,7 @@
         <repository>
             <name>ujar-public</name>
             <id>ujar-releases-repository</id>
-            <url>https://nexus.ujar.org/repository/maven-releases</url>
+            <url>https://nexus.c2a2.com/repository/maven-releases</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -193,7 +193,7 @@
         <repository>
             <name>ujar-public</name>
             <id>ujar-snapshots-repository</id>
-            <url>https://nexus.ujar.org/repository/maven-snapshots</url>
+            <url>https://nexus.c2a2.com/repository/maven-snapshots</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -207,7 +207,7 @@
         <pluginRepository>
             <name>ujar-public</name>
             <id>ujar-maven-central</id>
-            <url>https://nexus.ujar.org/repository/maven-central</url>
+            <url>https://nexus.c2a2.com/repository/maven-central</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -219,7 +219,7 @@
         <pluginRepository>
             <name>ujar-public</name>
             <id>ujar-releases-repository</id>
-            <url>https://nexus.ujar.org/repository/maven-releases</url>
+            <url>https://nexus.c2a2.com/repository/maven-releases</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -231,7 +231,7 @@
         <pluginRepository>
             <name>ujar-public</name>
             <id>ujar-snapshots-repository</id>
-            <url>https://nexus.ujar.org/repository/maven-snapshots</url>
+            <url>https://nexus.c2a2.com/repository/maven-snapshots</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
