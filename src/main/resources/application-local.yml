@@ -24,10 +24,10 @@ management :
       enabled : true
   server :
     add-application-context-header : true
-spring:
-    devtools:
-        add-properties: true
-        livereload:
-            enabled: true
-        restart:
-            enabled: true
+spring :
+  devtools :
+    add-properties : true
+    livereload :
+      enabled : true
+    restart :
+      enabled : true

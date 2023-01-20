@@ -1,5 +1,5 @@
-version: '3'
-services:
+version : '3'
+services :
   prometheus :
     container_name : bs-rst-dev-hello-world-prometheus
     image : prom/prometheus:v2.37.1
@@ -9,7 +9,7 @@ services:
       - '--config.file=/etc/prometheus/prometheus.yml'
     # On MacOS, remove next line and replace localhost by host.docker.internal in docker/prometheus/prometheus.yml and
     # docker/grafana/provisioning/datasources/datasource.yml
-    network_mode: host # to test locally running service
+    network_mode : host # to test locally running service
   grafana :
     container_name : bs-rst-dev-hello-world-grafana
     image : grafana/grafana:8.5.13
@@ -21,4 +21,4 @@ services:
       - GF_INSTALL_PLUGINS=grafana-piechart-panel
     # On MacOS, remove next line and replace localhost by host.docker.internal in docker/prometheus/prometheus.yml and
     # docker/grafana/provisioning/datasources/datasource.yml
-    network_mode: host # to test locally running service
+    network_mode : host # to test locally running service
