@@ -4,7 +4,7 @@ build :
   version : '@project.version@'
 spring :
   application :
-    name : basics-restful-hello-world
+    name : bs-rst-hello-world
   devtools :
     add-properties : false
     livereload :

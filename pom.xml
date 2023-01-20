@@ -2,12 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.ujar.basics.restful</groupId>
-    <artifactId>restful-hello-world</artifactId>
+    <groupId>org.ujar.bs.rst</groupId>
+    <artifactId>bs-rst-hello-world</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>basics-restful-hello-world</name>
+    <name>bs-rst-hello-world</name>
     <description>This backend version of the Spring application only provides a very simple REST API response.</description>
     <licenses>
         <license>
@@ -32,7 +32,7 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/ujar-org/basics-restful-hello-world.git</connection>
+        <connection>scm:git:https://github.com/ujar-org/bs-rst-hello-world.git</connection>
         <tag>HEAD</tag>
     </scm>
 
@@ -48,7 +48,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <sonar.exclusions>**/*Application.java</sonar.exclusions>
         <sonar.coverage.exclusions>**/*Config*.java,**/*Properties.java,**/*Test.java,**/Test*.java</sonar.coverage.exclusions>
-        <start-class>org.ujar.basics.restful.helloworld.HelloWorldApplication</start-class>
+        <start-class>org.ujar.bs.rst.helloworld.HelloWorldApplication</start-class>
     </properties>
 
     <dependencies>

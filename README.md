@@ -1,7 +1,7 @@
 # Hello, World! - Sample Restful Application
 
-[![Build Status](https://drone.c2a2.com/api/badges/ujar-org/basics-restful-hello-world/status.svg?ref=refs/heads/main)](https://drone.c2a2.com/ujar-org/basics-restful-hello-world)
-[![Quality Gate Status](https://sonarqube.c2a2.com/api/project_badges/measure?project=ujar-org%3Abasics-restful-hello-world&metric=alert_status&token=8d0720867021f4f16e89db625607430a10892ed3)](https://sonarqube.c2a2.com/dashboard?id=ujar-org%3Abasics-restful-hello-world)
+[![Build Status](https://drone.c2a2.com/api/badges/ujar-org/bs-rst-hello-world/status.svg?ref=refs/heads/main)](https://drone.c2a2.com/ujar-org/bs-rst-hello-world)
+[![Quality Gate Status](https://sonarqube.c2a2.com/api/project_badges/measure?project=ujar-org%3Abs-rst-hello-world&metric=alert_status&token=8d0720867021f4f16e89db625607430a10892ed3)](https://sonarqube.c2a2.com/dashboard?id=ujar-org%3Abs-rst-hello-world)
 
 Minimal Spring Boot based RESTful 'Hello World' example, including Swagger.
 
@@ -23,8 +23,8 @@ This application is a [Spring Boot](https://spring.io/guides/gs/spring-boot) app
 using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line:
 
 ```
-git clone https://github.com/ujar-org/basics-restful-hello-world.git
-cd basics-restful-hello-world
+git clone https://github.com/ujar-org/bs-rst-hello-world.git
+cd bs-rst-hello-world
 ./mvnw package
 java -jar target/*.jar
 ```
@@ -36,7 +36,7 @@ You can then access Swagger UI here: http://localhost:8080/swagger-ui.html
 1) On the command line
 
 ```
-git clone https://github.com/ujar-org/basics-restful-hello-world.git
+git clone https://github.com/ujar-org/bs-rst-hello-world.git
 ```
 
 2) Inside IDE
@@ -55,7 +55,7 @@ Visit [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.h
 The code follows [Google Code Conventions](https://google.github.io/styleguide/javaguide.html). Code
 quality is measured by:
 
-- [Sonarqube](https://sonarqube.c2a2.com/dashboard?id=ujar-org%3Abasics-restful-hello-world)
+- [Sonarqube](https://sonarqube.c2a2.com/dashboard?id=ujar-org%3Abs-rst-hello-world)
 - [PMD](https://pmd.github.io/)
 - [CheckStyle](https://checkstyle.sourceforge.io/)
 - [SpotBugs](https://spotbugs.github.io/)

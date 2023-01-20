@@ -1,4 +1,4 @@
-package org.ujar.basics.restful.helloworld.config;
+package org.ujar.bs.rst.helloworld.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.ujar.boot.starter.logbook.LogbookJsonBodyFilter;

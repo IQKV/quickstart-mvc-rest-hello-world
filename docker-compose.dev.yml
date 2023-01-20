@@ -1,7 +1,7 @@
 version: '3'
 services:
   prometheus :
-    container_name : basics-restful-dev-hello-world-prometheus
+    container_name : bs-rst-dev-hello-world-prometheus
     image : prom/prometheus:v2.37.1
     volumes :
       - ./docker/prometheus/:/etc/prometheus/
@@ -11,7 +11,7 @@ services:
     # docker/grafana/provisioning/datasources/datasource.yml
     network_mode: host # to test locally running service
   grafana :
-    container_name : basics-restful-dev-hello-world-grafana
+    container_name : bs-rst-dev-hello-world-grafana
     image : grafana/grafana:8.5.13
     volumes :
       - ./docker/grafana/provisioning/:/etc/grafana/provisioning/

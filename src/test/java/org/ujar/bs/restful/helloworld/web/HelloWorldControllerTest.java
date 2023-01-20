@@ -1,4 +1,4 @@
-package org.ujar.basics.restful.helloworld.web;
+package org.ujar.bs.rst.helloworld.web;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
