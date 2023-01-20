@@ -12,8 +12,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.ujar.bs.rst.helloworld.web.dto.GreetingDto;
 import org.ujar.boot.starter.restful.web.dto.ErrorResponse;
+import org.ujar.bs.rst.helloworld.web.dto.GreetingDto;
 
 @RestController
 @Tag(name = "Hello World controller", description = "API for greeting")
