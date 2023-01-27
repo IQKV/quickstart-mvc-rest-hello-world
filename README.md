@@ -1,8 +1,5 @@
 # Hello, World! - Sample Restful Application
 
-[![Build Status](http://iaolg9igjr3tghootxslfe.webrelay.io/api/badges/ujar-org/bs-rst-hello-world/status.svg?ref=refs/heads/main)](http://iaolg9igjr3tghootxslfe.webrelay.io/ujar-org/bs-rst-hello-world)
-[![Quality Gate Status](https://sonarqube.c2a2.com/api/project_badges/measure?project=ujar-org%3Abs-rst-hello-world&metric=alert_status&token=8d0720867021f4f16e89db625607430a10892ed3)](https://sonarqube.c2a2.com/dashboard?id=ujar-org%3Abs-rst-hello-world)
-
 Minimal Spring Boot based RESTful 'Hello World' example, including Swagger.
 
 ## Technology stack
