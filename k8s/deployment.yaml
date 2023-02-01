@@ -19,11 +19,11 @@ spec :
       containers :
         - name : hello-world
           image : docker-registry.c2a2.com/ujar/bs-rst-hello-world:latest
-          imagePullPolicy: Always
+          imagePullPolicy : Always
           ports :
-            - name: "http"
+            - name : "http"
               containerPort : 8080
-              hostPort: 8080
+              hostPort : 8080
           env :
             - name : SWAGGER_UI_RELATIVE_PATH
               valueFrom :
@@ -45,24 +45,24 @@ spec :
           readinessProbe :
             httpGet :
               port : 8080
-              path: /actuator/health/readiness
+              path : /actuator/health/readiness
             initialDelaySeconds : 120
             timeoutSeconds : 120
             periodSeconds : 50
             failureThreshold : 10
           livenessProbe :
-            httpGet:
-              port: 8080
-              path: /actuator/health/liveness
+            httpGet :
+              port : 8080
+              path : /actuator/health/liveness
             initialDelaySeconds : 120
             timeoutSeconds : 120
             periodSeconds : 50
             failureThreshold : 10
-          startupProbe:
-            httpGet:
-              port: 8080
-              path: /actuator/health/readiness
-            initialDelaySeconds: 120
+          startupProbe :
+            httpGet :
+              port : 8080
+              path : /actuator/health/readiness
+            initialDelaySeconds : 120
       serviceAccountName : api-service-account
 ---
 apiVersion : v1
