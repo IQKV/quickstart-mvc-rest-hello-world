@@ -1,11 +1,11 @@
-package org.ujar.bs.rst.helloworld;
+package org.ujar.restfulhelloworld;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HelloWorldApplicationTest {
+class RestfulHelloWorldApplicationTest {
 
   @Test
   void contextLoad() {

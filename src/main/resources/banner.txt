@@ -6,3 +6,5 @@ ${AnsiColor.GREEN}  \__,_|  \____/   \__,_| |_|
 ${AnsiColor.BLUE} ===============================
 ${AnsiColor.BLUE}  Hello, World! from REST API
 ${AnsiColor.BLUE} ===============================
+${AnsiColor.BLACK}
+${AnsiColor.BLACK}

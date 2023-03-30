@@ -1,10 +1,11 @@
-build :
-  description : '@project.description@'
-  relative-path : ''
-  version : '@project.version@'
+ujar :
+  build :
+    description : '@project.description@'
+    relative-path : ''
+    version : '@project.version@'
 spring :
   application :
-    name : bs-rst-hello-world
+    name : quickstart-restful-hello-world
   devtools :
     add-properties : false
     livereload :

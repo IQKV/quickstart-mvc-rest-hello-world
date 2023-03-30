@@ -18,7 +18,7 @@ spec :
     spec :
       containers :
         - name : hello-world
-          image : docker-registry.c2a2.com/ujar/bs-rst-hello-world:latest
+          image : docker-registry.c2a2.com/ujar/quickstart-restful-hello-world:0.2.0
           imagePullPolicy : Always
           ports :
             - name : "http"

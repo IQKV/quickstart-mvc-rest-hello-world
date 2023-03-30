@@ -1,4 +1,4 @@
-package org.ujar.bs.rst.helloworld.web;
+package org.ujar.restfulhelloworld.web;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -12,15 +12,14 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.ujar.boot.starter.restful.web.dto.ErrorResponse;
-import org.ujar.bs.rst.helloworld.web.dto.GreetingDto;
+import org.ujar.boot.restful.web.ErrorResponse;
 
 @RestController
-@Tag(name = "Hello World controller", description = "API for greeting")
+@Tag(name = "Hello World Resource", description = "API for greeting")
 @RequestMapping("/api/v1/hello-world")
 @Validated
 @Slf4j
-class HelloWorldController {
+class HelloWorldResource {
 
   @GetMapping
   @Operation(
@@ -39,5 +38,13 @@ class HelloWorldController {
     final var greeting = new GreetingDto();
     log.info("Send RESTFul API Response with {} message.", greeting.getMessage());
     return new ResponseEntity<>(greeting, HttpStatus.OK);
+  }
+
+  record GreetingDto() {
+    private static final String MESSAGE = "Hello, World!";
+
+    public String getMessage() {
+      return MESSAGE;
+    }
   }
 }

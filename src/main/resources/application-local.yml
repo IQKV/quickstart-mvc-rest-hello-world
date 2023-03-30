@@ -18,12 +18,13 @@ management :
     enabled-by-default : false
     web :
       exposure :
-        include : health, prometheus, info
+        include : health, info
   info :
     env :
       enabled : true
   server :
     add-application-context-header : true
+
 spring :
   devtools :
     add-properties : true
@@ -31,3 +32,6 @@ spring :
       enabled : true
     restart :
       enabled : true
+
+springdoc :
+  show-actuator : true

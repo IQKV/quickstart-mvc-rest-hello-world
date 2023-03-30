@@ -1,10 +1,12 @@
-build :
-  description : '@project.description@'
-  relative-path : ${SWAGGER_UI_RELATIVE_PATH:}
-  version : '@project.version@'
+ujar :
+  build :
+    description : '@project.description@'
+    relative-path : ${SWAGGER_UI_RELATIVE_PATH:}
+    version : '@project.version@'
+
 git :
   build_time : '@git.build.time@'
-  commit : '@git.commit.id@'
+  commit : '@git.commit.id.abbrev@'
 info :
   app :
     build_time : ${git.build_time}
@@ -12,28 +14,11 @@ info :
     git_commit : ${git.commit}
     name : '@project.name@'
     version : '@project.version@'
-logbook :
-  exclude :
-    - /actuator/**
-    - /v3/**
-    - /swagger-ui/**
-    - /swagger-resources/**
-  filter :
-    enabled : true
-  format :
-    style : json
-  minimum-status : ${MINIMUM_STATUS_LOG_BODY:400}
-  obfuscate :
-    headers :
-      - Authorization
-      - X-Secret
-    parameters :
-      - access_token
-      - password
+
 logging :
   level :
     ROOT : ${LOGGING_LEVEL_ROOT:INFO}
-    org.zalando.logbook.Logbook : TRACE
+
 management :
   health :
     livenessstate :
@@ -58,6 +43,7 @@ management :
   info :
     env :
       enabled : true
+
   server :
     add-application-context-header : true
 server :
@@ -65,7 +51,7 @@ server :
   shutdown : graceful
 spring :
   application :
-    name : bs-rst-hello-world
+    name : quickstart-restful-hello-world
   devtools :
     add-properties : false
     livereload :
@@ -78,7 +64,7 @@ spring :
     timeout-per-shutdown-phase : ${TIMEOUT_PER_SHUTDOWN:20s}
 
 springdoc :
-  show-actuator : true
+  show-actuator : false
   swagger-ui :
     config-url : ${SWAGGER_UI_RELATIVE_PATH:/}v3/api-docs/swagger-config
     url : ${SWAGGER_UI_RELATIVE_PATH:/}v3/api-docs

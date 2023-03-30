@@ -1,4 +1,4 @@
-package org.ujar.bs.rst.helloworld.web;
+package org.ujar.restfulhelloworld.web;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -11,14 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.web.servlet.MockMvc;
 
-@WebMvcTest(value = HelloWorldController.class)
-class HelloWorldControllerTest {
-
-  private final MockMvc mockMvc;
-
-  public HelloWorldControllerTest(@Autowired MockMvc mockMvc) {
-    this.mockMvc = mockMvc;
-  }
+@WebMvcTest(value = HelloWorldResource.class)
+record HelloWorldResourceTest(@Autowired MockMvc mockMvc) {
 
   @SneakyThrows
   @Test

@@ -1,0 +1,316 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "quickstart-restful-hello-world",
+        "description": "This backend version of the Spring application only provides a very simple REST API response.",
+        "version": "23.0.0-SNAPSHOT"
+    },
+    "servers": [
+        {
+            "url": ""
+        }
+    ],
+    "tags": [
+        {
+            "name": "Hello World Resource",
+            "description": "API for greeting"
+        }
+    ],
+    "paths": {
+        "/api/v1/hello-world": {
+            "get": {
+                "tags": [
+                    "Hello World Resource"
+                ],
+                "description": "Generate greeting",
+                "operationId": "getGreeting",
+                "responses": {
+                    "405": {
+                        "description": "Method Not Allowed",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponseInvalidHttpMethodMeta"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        }
+                    },
+                    "415": {
+                        "description": "Unsupported Media Type",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponseInvalidContentTypeMeta"
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal error",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        }
+                    },
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GreetingDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ErrorInvalidHttpMethodMeta": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "detail": {
+                        "type": "string"
+                    },
+                    "meta": {
+                        "$ref": "#/components/schemas/InvalidHttpMethodMeta"
+                    }
+                }
+            },
+            "ErrorResponseInvalidHttpMethodMeta": {
+                "type": "object",
+                "properties": {
+                    "errors": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ErrorInvalidHttpMethodMeta"
+                        }
+                    }
+                }
+            },
+            "InvalidHttpMethodMeta": {
+                "type": "object",
+                "properties": {
+                    "invalidMethod": {
+                        "type": "string"
+                    },
+                    "allowedMethods": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "ErrorInvalidRequestParameterMeta": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "detail": {
+                        "type": "string"
+                    },
+                    "meta": {
+                        "$ref": "#/components/schemas/InvalidRequestParameterMeta"
+                    }
+                }
+            },
+            "ErrorResponseInvalidRequestParameterMeta": {
+                "type": "object",
+                "properties": {
+                    "errors": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ErrorInvalidRequestParameterMeta"
+                        }
+                    }
+                }
+            },
+            "InvalidRequestParameterMeta": {
+                "type": "object",
+                "properties": {
+                    "parameter": {
+                        "type": "string"
+                    },
+                    "invalidValue": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ErrorInvalidRequestBodyMeta": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "detail": {
+                        "type": "string"
+                    },
+                    "meta": {
+                        "$ref": "#/components/schemas/InvalidRequestBodyMeta"
+                    }
+                }
+            },
+            "ErrorResponseInvalidRequestBodyMeta": {
+                "type": "object",
+                "properties": {
+                    "errors": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ErrorInvalidRequestBodyMeta"
+                        }
+                    }
+                }
+            },
+            "InvalidRequestBodyMeta": {
+                "type": "object",
+                "properties": {
+                    "field": {
+                        "type": "string"
+                    },
+                    "invalidValue": {
+                        "type": "object"
+                    }
+                }
+            },
+            "ErrorInvalidContentTypeMeta": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "detail": {
+                        "type": "string"
+                    },
+                    "meta": {
+                        "$ref": "#/components/schemas/InvalidContentTypeMeta"
+                    }
+                }
+            },
+            "ErrorResponseInvalidContentTypeMeta": {
+                "type": "object",
+                "properties": {
+                    "errors": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ErrorInvalidContentTypeMeta"
+                        }
+                    }
+                }
+            },
+            "InvalidContentTypeMeta": {
+                "type": "object",
+                "properties": {
+                    "invalidType": {
+                        "type": "string"
+                    },
+                    "supportedTypes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "ErrorResponseUnknownErrorMeta": {
+                "type": "object",
+                "properties": {
+                    "errors": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ErrorUnknownErrorMeta"
+                        }
+                    }
+                }
+            },
+            "ErrorUnknownErrorMeta": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "detail": {
+                        "type": "string"
+                    },
+                    "meta": {
+                        "$ref": "#/components/schemas/UnknownErrorMeta"
+                    }
+                }
+            },
+            "UnknownErrorMeta": {
+                "type": "object",
+                "properties": {
+                    "exceptionClass": {
+                        "type": "string"
+                    },
+                    "stackTrace": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ErrorObject": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "detail": {
+                        "type": "string"
+                    },
+                    "meta": {
+                        "type": "object"
+                    }
+                }
+            },
+            "ErrorResponse": {
+                "type": "object",
+                "properties": {
+                    "errors": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ErrorObject"
+                        }
+                    }
+                }
+            },
+            "GreetingDto": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Link": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "type": "string"
+                    },
+                    "templated": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,187 @@
+{
+    "info": {
+        "name": "quickstart-restful-hello-world",
+        "description": "This backend version of the Spring application only provides a very simple REST API response.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "get Greeting",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "*/*"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/api/v1/hello-world",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "v1",
+                        "hello-world"
+                    ]
+                },
+                "description": "Generate greeting"
+            },
+            "response": [
+                {
+                    "name": "Success",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/v1/hello-world",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "hello-world"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "*/*"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n  \"message\": \"qui\"\n}"
+                },
+                {
+                    "name": "Bad request",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/v1/hello-world",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "hello-world"
+                            ]
+                        }
+                    },
+                    "status": "Bad Request",
+                    "code": 400,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "*/*"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n  \"errors\": [\n    {\n      \"code\": \"aliqua eiusmod dolore\",\n      \"detail\": \"magna dolor aute fugiat\",\n      \"meta\": {}\n    },\n    {\n      \"code\": \"velit\",\n      \"detail\": \"minim\",\n      \"meta\": {}\n    }\n  ]\n}"
+                },
+                {
+                    "name": "Method Not Allowed",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/v1/hello-world",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "hello-world"
+                            ]
+                        }
+                    },
+                    "status": "Method Not Allowed",
+                    "code": 405,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "*/*"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n  \"errors\": [\n    {\n      \"code\": \"in ea sunt\",\n      \"detail\": \"occaecat pariatur fugiat Ut adipisicing\",\n      \"meta\": {\n        \"invalidMethod\": \"in esse commodo\",\n        \"allowedMethods\": [\n          \"Duis eiusmod laborum consequat ut\",\n          \"ea ut\"\n        ]\n      }\n    },\n    {\n      \"code\": \"veniam commodo\",\n      \"detail\": \"dolor consequat incididunt aliquip\",\n      \"meta\": {\n        \"invalidMethod\": \"aliqua elit Duis ullamco dolore\",\n        \"allowedMethods\": [\n          \"eiusmod Lorem\",\n          \"dolore ullamco cupidatat deserunt\"\n        ]\n      }\n    }\n  ]\n}"
+                },
+                {
+                    "name": "Unsupported Media Type",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/v1/hello-world",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "hello-world"
+                            ]
+                        }
+                    },
+                    "status": "Unsupported Media Type",
+                    "code": 415,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "*/*"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n  \"errors\": [\n    {\n      \"code\": \"consequat sunt fugiat\",\n      \"detail\": \"Duis culpa amet\",\n      \"meta\": {\n        \"invalidType\": \"Excepteur\",\n        \"supportedTypes\": [\n          \"ullamco consectetur magna\",\n          \"aute laboris proident irure fugiat\"\n        ]\n      }\n    },\n    {\n      \"code\": \"eu in\",\n      \"detail\": \"deserunt sunt\",\n      \"meta\": {\n        \"invalidType\": \"eu\",\n        \"supportedTypes\": [\n          \"Excepteur Lorem ea\",\n          \"dolor sunt\"\n        ]\n      }\n    }\n  ]\n}"
+                },
+                {
+                    "name": "Internal error",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/api/v1/hello-world",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "v1",
+                                "hello-world"
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "*/*"
+                        }
+                    ],
+                    "cookie": [],
+                    "body": "{\n  \"errors\": [\n    {\n      \"code\": \"qui nulla\",\n      \"detail\": \"consequat in eu cillum\",\n      \"meta\": {}\n    },\n    {\n      \"code\": \"ullamco nostrud id veniam esse\",\n      \"detail\": \"amet\",\n      \"meta\": {}\n    }\n  ]\n}"
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "",
+            "type": "string"
+        }
+    ]
+}

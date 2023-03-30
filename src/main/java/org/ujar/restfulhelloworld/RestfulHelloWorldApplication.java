@@ -1,11 +1,11 @@
-package org.ujar.bs.rst.helloworld;
+package org.ujar.restfulhelloworld;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HelloWorldApplication {
+public class RestfulHelloWorldApplication {
   public static void main(String[] args) {
-    SpringApplication.run(HelloWorldApplication.class, args);
+    SpringApplication.run(RestfulHelloWorldApplication.class, args);
   }
 }
