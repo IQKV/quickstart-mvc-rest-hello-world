@@ -11,7 +11,7 @@ kubectl config use-context $CLUSTER_NAME
 
 kubectl delete clusterrolebinding service-pod-reader-$K8S_NAMESPACE
 
-kubectl delete serviceaccount $SA_NAME -n $K8S_NAMESPACE
+kubectl delete serviceaccount $SVC_NAME -n $K8S_NAMESPACE
 
 kubectl delete clusterrole microservices-kubernetes-namespace-reader
 
