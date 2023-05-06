@@ -10,7 +10,7 @@ kubectl config use-context $CLUSTER_NAME
 kubectl create namespace $K8S_NAMESPACE
 
 # create clusterRole
-kubectl apply  -f ../k8s/rbac-cluster-role.yaml
+kubectl apply  -f ../manifests/rbac-cluster-role.yaml
 
 # creat service account in each namespace
 kubectl create serviceaccount $SVC_NAME -n $K8S_NAMESPACE

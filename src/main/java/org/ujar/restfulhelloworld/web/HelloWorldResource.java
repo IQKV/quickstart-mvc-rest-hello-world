@@ -5,21 +5,20 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.ujar.boot.restful.web.ErrorResponse;
+import org.ujar.boot.restful.web.ApiError;
 
 @RestController
 @Tag(name = "Hello World Resource", description = "API for greeting")
 @RequestMapping("/api/v1/hello-world")
-@Validated
-@Slf4j
-class HelloWorldResource {
+record HelloWorldResource() {
+
+  private static final Logger log = org.slf4j.LoggerFactory.getLogger(HelloWorldResource.class);
 
   @GetMapping
   @Operation(
@@ -29,10 +28,10 @@ class HelloWorldResource {
                        description = "Success"),
           @ApiResponse(responseCode = "500",
                        description = "Internal error",
-                       content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
+                       content = @Content(schema = @Schema(implementation = ApiError.class))),
           @ApiResponse(responseCode = "400",
                        description = "Bad request",
-                       content = @Content(schema = @Schema(implementation = ErrorResponse.class))),
+                       content = @Content(schema = @Schema(implementation = ApiError.class))),
       })
   ResponseEntity<GreetingDto> getGreeting() {
     final var greeting = new GreetingDto();

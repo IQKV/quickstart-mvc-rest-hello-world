@@ -8,7 +8,7 @@ set -x
 
 #minikube addons enable ingress
 
-cd ../k8s || exit
+cd ../manifests || exit
 
 kubectl config use-context $CLUSTER_NAME
 
