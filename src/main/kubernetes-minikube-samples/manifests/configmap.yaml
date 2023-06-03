@@ -3,5 +3,4 @@ kind : ConfigMap
 metadata :
   name : hello-world
 data :
-  swagger-ui-relative-path : "/hello/"
   logging-level-root : "INFO"
