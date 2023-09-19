@@ -18,7 +18,7 @@ spec :
     spec :
       containers :
         - name : hello-world
-          image : know-how.store/ujar-org/quickstart-restful-hello-world:latest
+          image : know-how.download/ujar-org/quickstart-restful-hello-world:latest
           imagePullPolicy : Always
           ports :
             - name : "http"
