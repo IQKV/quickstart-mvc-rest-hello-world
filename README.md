@@ -4,13 +4,13 @@ Minimal Spring Boot based RESTful 'Hello World' example, including Swagger.
 
 ## Technology stack
 
-Java 17, Spring Boot
+java 21, Spring Boot
 
 ## Prerequisites
 
 The following items should be installed in your system:
 
-* Java 17 or newer.
+* java 21 or newer.
 * git command line tool (https://help.github.com/articles/set-up-git)
 * Your preferred IDE (IDEA preferably)
 
@@ -20,7 +20,7 @@ This application is a [Spring Boot](https://spring.io/guides/gs/spring-boot) app
 using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line:
 
 ```
-git clone https://github.com/ujar-org/quickstart-restful-hello-world.git
+git clone https://github.com/uJarOrg/quickstart-restful-hello-world.git
 cd quickstart-restful-hello-world
 ./mvnw package
 java -jar target/*.jar
@@ -39,7 +39,7 @@ Now you can access to the Swagger UI here: http://localhost:8080/swagger-ui.html
 1) On the command line
 
 ```
-git clone https://github.com/ujar-org/quickstart-restful-hello-world.git
+git clone https://github.com/uJarOrg/quickstart-restful-hello-world.git
 ```
 
 2) Inside IDE
