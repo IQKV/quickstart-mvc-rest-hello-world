@@ -1,4 +1,4 @@
-package org.ujar.restfulhelloworld.config;
+package dev.knowhowto.restfulhelloworld.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

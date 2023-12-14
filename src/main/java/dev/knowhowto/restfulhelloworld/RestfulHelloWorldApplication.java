@@ -1,4 +1,4 @@
-package org.ujar.restfulhelloworld;
+package dev.knowhowto.restfulhelloworld;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

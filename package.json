@@ -1,5 +1,5 @@
 {
-    "name": "quickstart-restful-hello-world",
+    "name": "@know-how-spring-boot/quickstart-restful-hello-world",
     "version": "23.0.0",
     "description": "Provide an optional Git commit hooks.",
     "private": true,

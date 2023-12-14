@@ -1,17 +1,17 @@
-package org.ujar.restfulhelloworld.web;
+package dev.knowhowto.restfulhelloworld.web;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.iqkv.boot.restful.web.ApiError;
 import org.slf4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.ujar.boot.restful.web.ApiError;
 
 @RestController
 @Tag(name = "Hello World Resource", description = "API for greeting")
