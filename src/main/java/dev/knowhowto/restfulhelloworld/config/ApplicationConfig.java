@@ -5,6 +5,6 @@ import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@OpenAPIDefinition(info = @Info(title = "Hello World App", version = "23.0.0"))
+@OpenAPIDefinition(info = @Info(title = "Hello World App", version = "24.0.0"))
 class ApplicationConfig {
 }
