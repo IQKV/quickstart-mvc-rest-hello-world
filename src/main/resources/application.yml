@@ -89,7 +89,7 @@ server :
     redirect-context-root : false
 spring :
   application :
-    name : quickstart-restful-hello-world
+    name : quickstart-mvc-rest-hello-world
   devtools :
     add-properties : false
     livereload :

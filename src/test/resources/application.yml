@@ -5,7 +5,7 @@ iqkv :
     version : '@project.version@'
 spring :
   application :
-    name : quickstart-restful-hello-world
+    name : quickstart-mvc-rest-hello-world
   devtools :
     add-properties : false
     livereload :
