@@ -1,4 +1,4 @@
-package dev.knowhowto.restfulhelloworld.config;
+package com.iqkv.incubator.quickstart.mvcresthelloworld.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;

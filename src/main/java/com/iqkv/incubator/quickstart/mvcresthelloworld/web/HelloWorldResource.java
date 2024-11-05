@@ -1,4 +1,4 @@
-package dev.knowhowto.restfulhelloworld.web;
+package com.iqkv.incubator.quickstart.mvcresthelloworld.web;
 
 import com.iqkv.boot.web.rest.ApiError;
 import io.swagger.v3.oas.annotations.Operation;

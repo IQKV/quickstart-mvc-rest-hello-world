@@ -1,11 +1,11 @@
-package dev.knowhowto.restfulhelloworld;
+package com.iqkv.incubator.quickstart.mvcresthelloworld;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RestfulHelloWorldApplicationTest {
+class MvcRestHelloWorldApplicationTest {
 
   @Test
   void contextLoad() {
