@@ -1,6 +1,6 @@
 package com.iqkv.incubator.quickstart.mvcresthelloworld.web;
 
-import com.iqkv.boot.web.rest.ApiError;
+import com.iqkv.boot.mvc.rest.ApiError;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
