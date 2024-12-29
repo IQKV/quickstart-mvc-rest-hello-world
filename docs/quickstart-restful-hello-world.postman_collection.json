@@ -28,14 +28,8 @@
                     ],
                     "url": {
                       "raw": "{{baseUrl}}/api/v1/hello-world",
-                      "host": [
-                        "{{baseUrl}}"
-                      ],
-                      "path": [
-                        "api",
-                        "v1",
-                        "hello-world"
-                      ]
+                      "host": ["{{baseUrl}}"],
+                      "path": ["api", "v1", "hello-world"]
                     },
                     "description": "Generate greeting"
                   },
@@ -47,14 +41,8 @@
                         "header": [],
                         "url": {
                           "raw": "{{baseUrl}}/api/v1/hello-world",
-                          "host": [
-                            "{{baseUrl}}"
-                          ],
-                          "path": [
-                            "api",
-                            "v1",
-                            "hello-world"
-                          ]
+                          "host": ["{{baseUrl}}"],
+                          "path": ["api", "v1", "hello-world"]
                         }
                       },
                       "status": "OK",
@@ -76,14 +64,8 @@
                         "header": [],
                         "url": {
                           "raw": "{{baseUrl}}/api/v1/hello-world",
-                          "host": [
-                            "{{baseUrl}}"
-                          ],
-                          "path": [
-                            "api",
-                            "v1",
-                            "hello-world"
-                          ]
+                          "host": ["{{baseUrl}}"],
+                          "path": ["api", "v1", "hello-world"]
                         }
                       },
                       "status": "Bad Request",
@@ -105,14 +87,8 @@
                         "header": [],
                         "url": {
                           "raw": "{{baseUrl}}/api/v1/hello-world",
-                          "host": [
-                            "{{baseUrl}}"
-                          ],
-                          "path": [
-                            "api",
-                            "v1",
-                            "hello-world"
-                          ]
+                          "host": ["{{baseUrl}}"],
+                          "path": ["api", "v1", "hello-world"]
                         }
                       },
                       "status": "Internal Server Error",

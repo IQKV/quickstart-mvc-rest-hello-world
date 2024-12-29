@@ -19,9 +19,7 @@
   "paths": {
     "/api/v1/hello-world": {
       "get": {
-        "tags": [
-          "Hello World Resource"
-        ],
+        "tags": ["Hello World Resource"],
         "description": "Generate greeting",
         "operationId": "getGreeting",
         "responses": {
