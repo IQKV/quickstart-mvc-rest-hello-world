@@ -1,4 +1,4 @@
-# Hello, World! - RESTful Application
+# 🚀 Hello, World! - RESTful Application
 
 Minimal Spring Boot based RESTful 'Hello World' example, including Swagger.
 
