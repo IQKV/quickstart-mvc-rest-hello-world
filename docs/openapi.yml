@@ -1,56 +1,56 @@
-openapi : 3.0.1
-info :
-  title : quickstart-mvc-rest-hello-world
-  description : This backend version of the Spring application only provides a very simple REST API response.
-  version : 24.0.0-SNAPSHOT
-servers :
-  - url : ''
-tags :
-  - name : Hello World Resource
-    description : API for greeting
-paths :
-  /api/v1/hello-world :
-    get :
-      tags :
+openapi: 3.0.1
+info:
+  title: quickstart-mvc-rest-hello-world
+  description: This backend version of the Spring application only provides a very simple REST API response.
+  version: 24.0.0-SNAPSHOT
+servers:
+  - url: ""
+tags:
+  - name: Hello World Resource
+    description: API for greeting
+paths:
+  /api/v1/hello-world:
+    get:
+      tags:
         - Hello World Resource
-      description : Generate greeting
-      operationId : getGreeting
-      responses :
-        '200' :
-          description : Success
-          content :
-            '*/*' :
-              schema :
-                $ref : '#/components/schemas/GreetingDto'
-        '400' :
-          description : Bad request
-          content :
-            '*/*' :
-              schema :
-                $ref : '#/components/schemas/ApiError'
-        '500' :
-          description : Internal error
-          content :
-            '*/*' :
-              schema :
-                $ref : '#/components/schemas/ApiError'
-components :
-  schemas :
-    ApiError :
-      type : object
-      properties :
-        path :
-          type : string
-        message :
-          type : string
-        statusCode :
-          type : integer
-          format : int32
-        localDateTime :
-          type : string
-          format : date-time
-    GreetingDto :
-      type : object
-      properties :
-        message :
-          type : string
+      description: Generate greeting
+      operationId: getGreeting
+      responses:
+        "200":
+          description: Success
+          content:
+            "*/*":
+              schema:
+                $ref: "#/components/schemas/GreetingDto"
+        "400":
+          description: Bad request
+          content:
+            "*/*":
+              schema:
+                $ref: "#/components/schemas/ApiError"
+        "500":
+          description: Internal error
+          content:
+            "*/*":
+              schema:
+                $ref: "#/components/schemas/ApiError"
+components:
+  schemas:
+    ApiError:
+      type: object
+      properties:
+        path:
+          type: string
+        message:
+          type: string
+        statusCode:
+          type: integer
+          format: int32
+        localDateTime:
+          type: string
+          format: date-time
+    GreetingDto:
+      type: object
+      properties:
+        message:
+          type: string
