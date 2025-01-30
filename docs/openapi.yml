@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: quickstart-mvc-rest-hello-world
   description: This backend version of the Spring application only provides a very simple REST API response.
-  version: 24.0.0-SNAPSHOT
+  version: 25.0.0-SNAPSHOT
 servers:
   - url: ""
 tags:

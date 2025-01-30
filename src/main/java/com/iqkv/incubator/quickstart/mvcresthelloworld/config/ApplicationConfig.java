@@ -1,5 +1,5 @@
 /*
- * Copyright 2024 IQKV Team.
+ * Copyright 2025 IQKV Team.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,6 @@ import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@OpenAPIDefinition(info = @Info(title = "Hello World App", version = "24.0.0"))
+@OpenAPIDefinition(info = @Info(title = "Hello World App", version = "25.0.0"))
 class ApplicationConfig {
 }
