@@ -1,5 +1,5 @@
 {
-  "name": "@know-how-spring-boot/quickstart-mvc-rest-hello-world",
+  "name": "@iqkv/quickstart-mvc-rest-hello-world",
   "version": "25.0.0",
   "description": "Provide an optional Git commit hooks.",
   "private": true,
