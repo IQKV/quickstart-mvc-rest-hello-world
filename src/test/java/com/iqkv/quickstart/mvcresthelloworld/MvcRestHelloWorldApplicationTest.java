@@ -14,13 +14,21 @@
  * limitations under the License.
  */
 
-package com.iqkv.incubator.quickstart.mvcresthelloworld.config;
+package com.iqkv.quickstart.mvcresthelloworld;
 
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
-import io.swagger.v3.oas.annotations.info.Info;
-import org.springframework.context.annotation.Configuration;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@Configuration
-@OpenAPIDefinition(info = @Info(title = "Hello World App", version = "25.0.0"))
-class ApplicationConfig {
+@SpringBootTest
+class MvcRestHelloWorldApplicationTest {
+
+  @Test
+  void contextLoad() {
+    Assertions.assertDoesNotThrow(this::doNotThrowException);
+  }
+
+  private void doNotThrowException() {
+    // This method will never throw exception
+  }
 }
