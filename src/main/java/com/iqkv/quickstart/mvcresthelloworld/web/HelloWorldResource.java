@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-package com.iqkv.incubator.quickstart.mvcresthelloworld.web;
+package com.iqkv.quickstart.mvcresthelloworld.web;
 
-import com.iqkv.boot.mvc.rest.ApiError;
+import expert.uses.boot.mvc.rest.ApiError;
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
