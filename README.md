@@ -1,18 +1,20 @@
 # 🚀 Hello, World! - RESTful Application
 
-Minimal Spring Boot based RESTful 'Hello World' example, including Swagger.
+Minimal Spring Boot based RESTful 'Hello World' example, including Swagger/OpenAPI, health, metrics, tests, and optional local observability stack.
 
 ## Technology stack
 
-Java 21, Spring Boot
+Java 21, Spring Boot, Undertow, OpenAPI/Swagger, JUnit, Mockito, JaCoCo
 
 ## Prerequisites
 
-The following items should be installed in your system:
+The following items should be installed on your system:
 
-- Java 21 or newer.
-- git command line tool (https://help.github.com/articles/set-up-git)
-- Your preferred IDE (IDEA preferably)
+- Java 21 or newer
+- Git command line tool (`https://help.github.com/articles/set-up-git`)
+- Your preferred IDE (IntelliJ IDEA preferred)
+- Optional: Docker (for local observability via Compose)
+- Optional: Minikube + kubectl (for local Kubernetes)
 
 ### Running locally
 
@@ -26,13 +28,23 @@ cd quickstart-mvc-rest-hello-world
 java -jar target/*.jar
 ```
 
-You might also want to use Maven's `spring-boot:run` goal - applications run in an exploded form, as they do in your IDE:
+You might also want to use Maven's `spring-boot:run` goal — applications run in an exploded form, as they do in your IDE:
 
 ```bash
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=local -P dev
 ```
 
-Now you can access to the Swagger UI here: http://localhost:8080/swagger-ui.html
+- Default HTTP port: `8080`
+- Base API path: `/api/v1`
+
+### API endpoints
+
+- GET `/api/v1/hello-world` → returns a JSON object `{ "message": "Hello, World!" }`
+
+### Swagger / OpenAPI
+
+- Swagger UI: `http://localhost:8080/swagger-ui.html`
+- OpenAPI spec: see `docs/openapi.yml`; a generated `swagger.json` is also in `docs/`
 
 ### Working with the Application in your IDE
 
@@ -44,10 +56,10 @@ git clone https://github.com/IQKV/quickstart-mvc-rest-hello-world.git
 
 2. Inside IDE
 
-In the main menu, choose `File -> Open` and select the HelloWorldApplication [pom.xml](pom.xml). Click on the `Open` button.
-Activate "local" profile in the Run settings or set it via environment
-variables. [instruction](https://stackoverflow.com/questions/38520638/how-to-set-spring-profile-from-system-variable)
-Wait to indexing completion and push the green "play" button.
+In the main menu, choose `File -> Open` and select the project `pom.xml`. Click `Open`.
+Activate the `local` profile in Run Configuration, or set it via environment variables (see
+[instruction](https://stackoverflow.com/questions/38520638/how-to-set-spring-profile-from-system-variable)).
+Wait for indexing completion and press the Run button.
 
 3. Navigate to Swagger UI
 
@@ -72,7 +84,65 @@ This project contains JUnit tests, Hamcrest matchers, Mockito test doubles, Wire
 ./mvnw verify -Puse-qulice
 ```
 
-The minimum percentage of code coverage required for the workflow to pass is **80%**.
+- Coverage is enforced via JaCoCo rules in `pom.xml` (bundle/class rules with ≥90% thresholds).
+- The minimum percentage of code coverage required for the workflow to pass is **80%**.
+
+## Observability (optional)
+
+A local Prometheus + Grafana stack is provided via Docker Compose to visualize metrics exposed by Actuator/Micrometer.
+
+```bash
+# Start Prometheus and Grafana on the host network (Linux/Windows)
+docker compose up -d
+
+# Access Grafana (default admin password is set to "changeme")
+http://localhost:3000
+
+# Prometheus (host network)
+http://localhost:9090
+```
+
+Notes:
+- Compose file uses `network_mode: host` for easier local testing. On macOS, remove that line and use `host.docker.internal` where applicable (see comments in `compose.yaml`).
+- Actuator metrics endpoint is exposed by Spring Boot; Prometheus is pre-configured to scrape `localhost:8080`.
+
+## Kubernetes with Minikube (optional)
+
+Manifests and helper scripts are available under `src/main/minikube`.
+
+- Manifests: `src/main/minikube/manifests`
+- Scripts: `src/main/minikube/scripts`
+
+Typical flow:
+
+```bash
+# From the project root
+bash src/main/minikube/scripts/setup-cluster.sh   # one-time tooling setup
+bash src/main/minikube/scripts/start-cluster.sh   # start minikube
+bash src/main/minikube/scripts/set-env.sh         # export environment vars
+
+# Build application JAR
+./mvnw package
+
+# Apply manifests
+auth kubectl apply -f src/main/minikube/manifests
+
+# Optional helpers
+bash src/main/minikube/scripts/ip-cluster.sh
+bash src/main/minikube/scripts/stop-cluster.sh
+```
+
+> If using Windows, run the corresponding `.cmd` or use Git Bash/WSL to execute `.sh` scripts.
+
+> Exposed endpoints may be fronted by an Ingress in the manifests; adjust hostnames according to your Minikube setup.
+
+> Health checks and metrics are exposed via Spring Boot Actuator.
+
+> For local-only testing, running directly with `spring-boot:run` is usually sufficient.
+
+> For CI/linting rules, see `pom.xml` profiles (e.g., `use-qulice`).
+
+> For API examples and schema, see `docs/` folder (OpenAPI, Swagger JSON, Postman collection).
 
 > ### Versioning
 >
