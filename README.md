@@ -103,6 +103,7 @@ http://localhost:9090
 ```
 
 Notes:
+
 - Compose file uses `network_mode: host` for easier local testing. On macOS, remove that line and use `host.docker.internal` where applicable (see comments in `compose.yaml`).
 - Actuator metrics endpoint is exposed by Spring Boot; Prometheus is pre-configured to scrape `localhost:8080`.
 
