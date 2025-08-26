@@ -21,7 +21,7 @@ The following items should be installed on your system:
 This application is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application built
 using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line:
 
-```bash
+```shell script
 git clone https://github.com/IQKV/quickstart-mvc-rest-hello-world.git
 cd quickstart-mvc-rest-hello-world
 ./mvnw package
@@ -30,7 +30,7 @@ java -jar target/*.jar
 
 You might also want to use Maven's `spring-boot:run` goal — applications run in an exploded form, as they do in your IDE:
 
-```bash
+```shell script
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=local -P dev
 ```
 
@@ -50,7 +50,7 @@ You might also want to use Maven's `spring-boot:run` goal — applications run i
 
 1. On the command line
 
-```bash
+```shell script
 git clone https://github.com/IQKV/quickstart-mvc-rest-hello-world.git
 ```
 
@@ -80,7 +80,7 @@ quality is measured by:
 
 This project contains JUnit tests, Hamcrest matchers, Mockito test doubles, Wiremock stubs, etc. You can run the test suite using
 
-```bash
+```shell script
 ./mvnw verify -Puse-qulice
 ```
 
@@ -91,7 +91,7 @@ This project contains JUnit tests, Hamcrest matchers, Mockito test doubles, Wire
 
 A local Prometheus + Grafana stack is provided via Docker Compose to visualize metrics exposed by Actuator/Micrometer.
 
-```bash
+```shell script
 # Start Prometheus and Grafana on the host network (Linux/Windows)
 docker compose up -d
 
@@ -116,7 +116,7 @@ Manifests and helper scripts are available under `src/main/minikube`.
 
 Typical flow:
 
-```bash
+```shell script
 # From the project root
 bash src/main/minikube/scripts/setup-cluster.sh   # one-time tooling setup
 bash src/main/minikube/scripts/start-cluster.sh   # start minikube
