@@ -16,7 +16,7 @@
 
 package com.iqkv.quickstart.mvcresthelloworld.web;
 
-import com.iqkv.boot.mvc.rest.ApiError;
+import com.github.dimdnk.boot.mvc.rest.ApiError;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
