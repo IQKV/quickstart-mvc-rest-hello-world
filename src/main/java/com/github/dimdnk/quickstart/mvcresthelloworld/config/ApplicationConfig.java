@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 IQKV Foundation Team.
+ * Copyright 2025 KnowHowToDev Team.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,21 +14,13 @@
  * limitations under the License.
  */
 
-package com.iqkv.quickstart.mvcresthelloworld;
+package com.github.dimdnk.quickstart.mvcresthelloworld.config;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootTest
-class MvcRestHelloWorldApplicationTest {
-
-  @Test
-  void contextLoad() {
-    Assertions.assertDoesNotThrow(this::doNotThrowException);
-  }
-
-  private void doNotThrowException() {
-    // This method will never throw exception
-  }
+@Configuration
+@OpenAPIDefinition(info = @Info(title = "Hello World App", version = "25.0.0"))
+class ApplicationConfig {
 }

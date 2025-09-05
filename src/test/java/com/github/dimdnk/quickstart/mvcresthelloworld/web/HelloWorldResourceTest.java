@@ -1,5 +1,5 @@
 /*
- * Copyright 2025 IQKV Foundation Team.
+ * Copyright 2025 KnowHowToDev Team.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.iqkv.quickstart.mvcresthelloworld.web;
+package com.github.dimdnk.quickstart.mvcresthelloworld.web;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
