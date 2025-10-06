@@ -109,28 +109,28 @@ Notes:
 
 ## Kubernetes with Minikube (optional)
 
-Manifests and helper scripts are available under `src/main/minikube`.
+Manifests and helper scripts are available under `minikube`.
 
-- Manifests: `src/main/minikube/manifests`
-- Scripts: `src/main/minikube/scripts`
+- Manifests: `minikube/manifests`
+- Scripts: `minikube/scripts`
 
 Typical flow:
 
 ```shell script
 # From the project root
-bash src/main/minikube/scripts/setup-cluster.sh   # one-time tooling setup
-bash src/main/minikube/scripts/start-cluster.sh   # start minikube
-bash src/main/minikube/scripts/set-env.sh         # export environment vars
+bash minikube/scripts/setup-cluster.sh   # one-time tooling setup
+bash minikube/scripts/start-cluster.sh   # start minikube
+bash minikube/scripts/set-env.sh         # export environment vars
 
 # Build application JAR
 ./mvnw package
 
 # Apply manifests
-auth kubectl apply -f src/main/minikube/manifests
+auth kubectl apply -f minikube/manifests
 
 # Optional helpers
-bash src/main/minikube/scripts/ip-cluster.sh
-bash src/main/minikube/scripts/stop-cluster.sh
+bash minikube/scripts/ip-cluster.sh
+bash minikube/scripts/stop-cluster.sh
 ```
 
 > If using Windows, run the corresponding `.cmd` or use Git Bash/WSL to execute `.sh` scripts.
