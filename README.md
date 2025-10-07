@@ -144,4 +144,3 @@ bash minikube/scripts/stop-cluster.sh
 > For CI/linting rules, see `pom.xml` profiles (e.g., `use-qulice`).
 
 > For API examples and schema, see `docs/` folder (OpenAPI, Swagger JSON, Postman collection).
-

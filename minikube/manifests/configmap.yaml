@@ -1,6 +1,6 @@
-apiVersion : v1
-kind : ConfigMap
-metadata :
-  name : hello-world
-data :
-  logging-level-root : "INFO"
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-world
+data:
+  logging-level-root: "INFO"
