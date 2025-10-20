@@ -4,13 +4,13 @@ Minimal Spring Boot based RESTful 'Hello World' example, including Swagger/OpenA
 
 ## Technology stack
 
-Java 25, Spring Boot, Undertow, OpenAPI/Swagger, JUnit, Mockito, JaCoCo
+Java 21, Spring Boot, Undertow, OpenAPI/Swagger, JUnit, Mockito, JaCoCo
 
 ## Prerequisites
 
 The following items should be installed on your system:
 
-- Java 25 or newer
+- Java 21 or newer
 - Git command line tool (`https://help.github.com/articles/set-up-git`)
 - Your preferred IDE (IntelliJ IDEA preferred)
 - Optional: Docker (for local observability via Compose)
