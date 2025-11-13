@@ -29,7 +29,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.web.servlet.MockMvc;
 
 @WebMvcTest(value = HelloWorldResource.class, excludeAutoConfiguration = {SecurityAutoConfiguration.class})
-record HelloWorldResourceTest(final @Autowired MockMvc mockMvc) {
+record HelloWorldResourceTest(@Autowired MockMvc mockMvc) {
 
   @SneakyThrows
   @Test
