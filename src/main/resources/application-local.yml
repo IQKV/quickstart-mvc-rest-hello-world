@@ -1,38 +1,38 @@
-management :
-  health :
-    livenessstate :
-      enabled : true
-    readinessstate :
-      enabled : true
-  endpoint :
-    health :
-      enabled : true
-      show-details : always
-      probes :
-        enabled : true
-    info :
-      enabled : true
-    prometheus :
-      enabled : true
-  endpoints :
-    enabled-by-default : false
-    web :
-      exposure :
-        include : health, info
-  info :
-    env :
-      enabled : true
-  server :
-    port : ${MANAGEMENT_SERVER_PORT:8080}
-    add-application-context-header : true
+management:
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+      probes:
+        enabled: true
+    info:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: health, info
+  info:
+    env:
+      enabled: true
+  server:
+    port: ${MANAGEMENT_SERVER_PORT:8080}
+    add-application-context-header: true
 
-spring :
-  devtools :
-    add-properties : true
-    livereload :
-      enabled : true
-    restart :
-      enabled : true
+spring:
+  devtools:
+    add-properties: true
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
 
-springdoc :
-  show-actuator : true
+springdoc:
+  show-actuator: true

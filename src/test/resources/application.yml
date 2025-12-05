@@ -1,14 +1,14 @@
-application-configuration :
-  info :
-    description : '@project.description@'
-    relative-path : '/'
-    version : '@project.version@'
-spring :
-  application :
-    name : quickstart-mvc-rest-hello-world
-  devtools :
-    add-properties : false
-    livereload :
-      enabled : false
-    restart :
-      enabled : false
+application-configuration:
+  info:
+    description: '@project.description@'
+    relative-path: '/'
+    version: '@project.version@'
+spring:
+  application:
+    name: quickstart-mvc-rest-hello-world
+  devtools:
+    add-properties: false
+    livereload:
+      enabled: false
+    restart:
+      enabled: false
