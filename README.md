@@ -31,7 +31,7 @@ java -jar target/*.jar
 You might also want to use Maven's `spring-boot:run` goal — applications run in an exploded form, as they do in your IDE:
 
 ```shell script
-./mvnw spring-boot:run -Dspring-boot.run.profiles=local -P dev
+./mvnw spring-boot:run -Dspring-boot.run.profiles=local -P local
 ```
 
 - Default HTTP port: `8080`
